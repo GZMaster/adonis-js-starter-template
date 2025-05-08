@@ -6,18 +6,8 @@ import type {
   ExcutableQueryBuilderContract,
 } from '@adonisjs/lucid/types/querybuilder'
 
-type SearchableTables =
-  | 'properties'
-  | 'tenants'
-  | 'contractors'
-  | 'contacts'
-  | 'leaseable_entities'
-  | 'maintenance_requests'
-  | 'leases'
-  | 'payments'
-  | 'invoices'
-  | 'expenses'
-  | 'team_members'
+// Add more tables as needed
+type SearchableTables = 'users'
 
 interface ModelTypes {
   whereTrue(column: string): this
