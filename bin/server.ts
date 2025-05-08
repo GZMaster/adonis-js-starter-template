@@ -33,6 +33,11 @@ new Ignitor(APP_ROOT, { importer: IMPORTER })
   .tap((app) => {
     app.booting(async () => {
       await import('#start/env')
+      await import('#extensions/vine')
+      await import('#extensions/http_request')
+      await import('#extensions/http_context')
+      await import('#extensions/model')
+      await import('#extensions/email')
     })
     app.listen('SIGTERM', () => app.terminate())
     app.listenIf(app.managedByPm2, 'SIGINT', () => app.terminate())
